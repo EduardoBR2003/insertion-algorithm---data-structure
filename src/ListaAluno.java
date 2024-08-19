@@ -1,5 +1,7 @@
 package src;
 
+import java.util.ArrayList;
+
 public class ListaAluno {
     private Nodo pri;
     private Nodo ult;
@@ -55,17 +57,26 @@ public class ListaAluno {
     }
 
     //BUSCAR POR NOTA
-    public Aluno buscarAlunoPorNota(float nota){
+    public void buscarAlunoPorNota(float nota){
         Aluno buscar = new Aluno();
+        ArrayList<Aluno> alunos = new ArrayList<>();
 
         Nodo aux = getPri();
         while (aux.getNext() != null) {
-            if(aux.getNext().getAluno().getNota()==nota){
+            if(Math.abs(aux.getNext().getAluno().getNota() - nota) < 0.001f){
                 buscar = (aux.getNext().getAluno());
+                alunos.add(buscar);
             }
             aux = aux.getNext();
         }
-        return buscar;
+
+        if(aux.getAluno() == null){
+            System.out.println("Não existe nenhum aluno com está nota.");
+        }else {
+            for (Aluno aluno : alunos) {
+                System.out.println(aluno.toString());
+            }
+        }
     }
 
     //BUSCAR POR MATRÍCULA

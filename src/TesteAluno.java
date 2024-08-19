@@ -23,7 +23,8 @@ public class TesteAluno {
             } else if (menu == 3) {
                 System.out.println("Insira a nota para buscar o aluno: ");
                 float numNoFormat = sc.nextFloat();
-                System.out.println(ls.buscarAlunoPorNota(numNoFormat).toString());
+                ls.buscarAlunoPorNota(numNoFormat);
+                sc.nextLine();
             } else if (menu == 4) {
                 System.out.println("Insira a matrícula para buscar o aluno: ");
                 System.out.println(ls.buscarAlunoPorMatri(sc.nextInt()).toString() + "\n");
