@@ -117,10 +117,25 @@ public class ListaAluno {
         return alunoRemovido;
     }
 
+    //BUSCAR POR CIDADE
+    public void buscarAlunoPorCidade(String cidade){
+        Aluno buscar = new Aluno();
+        ArrayList<Aluno> alunos = new ArrayList<>();
 
+        Nodo aux = getPri();
+        while (aux.getNext() != null) {
+            if(aux.getNext() != null && aux.getNext().getAluno().getEndereco().equalsIgnoreCase(cidade)){
+                buscar = (aux.getNext().getAluno());
+                alunos.add(buscar);
+            }
+            aux = aux.getNext();
+        }
 
+        for (Aluno aluno : alunos) {
+                System.out.println(aluno.toString());
+        }
 
-
+    }
     //Métodos gettes e settes
     public Nodo getPri() {
         return pri;
