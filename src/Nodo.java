@@ -5,6 +5,13 @@ public class Nodo {
     private Nodo next;
     private Aluno aluno;
 
+    public Nodo(Aluno aluno) {
+        this.aluno = aluno;
+    }
+    public Nodo(){
+
+    }
+
     public Nodo getNext() {
         return next;
     }

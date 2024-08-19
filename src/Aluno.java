@@ -4,6 +4,8 @@ public class Aluno {
     private String nome;
     private int matricula;
     private float nota;
+    private String endereco;
+    private String telefone;
 
     public Aluno(){
 
@@ -13,6 +15,22 @@ public class Aluno {
         this.nome = nome;
         this.matricula = matricula;
         this.nota = nota;
+    }
+
+    public String getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
     }
 
     public String getNome() {
@@ -37,5 +55,16 @@ public class Aluno {
 
     public void setNota(float nota) {
         this.nota = nota;
+    }
+
+    @Override
+    public String toString() {
+        return "Aluno{" +
+                "nome='" + nome + '\'' +
+                ", matricula=" + matricula +
+                ", nota=" + nota +
+                ", endereco='" + endereco + '\'' +
+                ", telefone='" + telefone + '\'' +
+                '}';
     }
 }
