@@ -1,8 +1,13 @@
 package src;
 
 import java.util.Scanner;
-
-public class TesteAluno {
+/* Alunos: Eduardo Rodrigues da Silva, Marlon Neves da Mota, Guilherme Pereira da Silva
+*  Disciplina: Estrutura de dados I
+*  Data de codificação: 18/08/2024
+*  Objetivo da classe Main: Tem como objetivo ser a interface principal de interação com o
+*  usuário para gerenciar uma lista de alunos.
+* */
+public class Main {
     public static void main(String[] args) throws Exception {
         Scanner sc = new Scanner(System.in);
         ListaAluno ls = new ListaAluno();
@@ -13,12 +18,12 @@ public class TesteAluno {
             sc = new Scanner(System.in);
             if (menu == 1) {
                 Aluno aluno = new Aluno();
-//                System.out.println("Insira seu nome: ");
-//                aluno.setNome(sc.nextLine());
+                System.out.println("Insira seu nome: ");
+                aluno.setNome(sc.nextLine());
                 System.out.println("Insira a cidade: ");
                 aluno.setEndereco(sc.nextLine());
-//                System.out.println("Insira o telefone: ");
-//                aluno.setTelefone(sc.nextLine());
+                System.out.println("Insira o telefone: ");
+                aluno.setTelefone(sc.nextLine());
                 System.out.println("Insira a matrícula: ");
                 aluno.setMatricula(sc.nextInt());
                 System.out.println("Insira a nota: ");
@@ -68,24 +73,4 @@ public class TesteAluno {
                 0 - Para SAIR.\s
                 """;
     }
-
-
-//        Scanner sc = new Scanner(System.in);
-//
-//
-//        Aluno a = new Aluno("Aluno1",1234,sc.nextFloat());
-//        Aluno a2 = new Aluno("Aluno2",1234,sc.nextFloat());
-//        Aluno a3 = new Aluno("Aluno3",1234,sc.nextFloat());
-//        Aluno a4 = new Aluno("Aluno4",1234,sc.nextFloat());
-//        Aluno a5 = new Aluno("Aluno5",1234,sc.nextFloat());
-//
-//
-//        ListaAluno l = new ListaAluno();
-//        l.inserirAluno(a);
-//        l.inserirAluno(a2);
-//        l.inserirAluno(a3);
-//        l.inserirAluno(a4);
-//        l.inserirAluno(a5);
-//
-//        l.imprimir();
 }

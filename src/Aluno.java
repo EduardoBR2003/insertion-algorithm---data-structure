@@ -1,5 +1,10 @@
 package src;
-
+/* Alunos: Eduardo Rodrigues da Silva, Marlon Neves da Mota, Guilherme Pereira da Silva
+ *  Disciplina: Estrutura de dados I
+ *  Data de codificação: 18/08/2024
+ *  Objetivo da classe Aluno: Essa classe serve como uma estrutura básica para
+ *  armazenar e manipular as informações dos alunos (Classe modelo).
+ * */
 public class Aluno {
     private String nome;
     private int matricula;

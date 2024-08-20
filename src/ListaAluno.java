@@ -1,7 +1,13 @@
 package src;
 
 import java.util.ArrayList;
-
+/* Alunos: Eduardo Rodrigues da Silva, Marlon Neves da Mota, Guilherme Pereira da Silva
+ *  Disciplina: Estrutura de dados I
+ *  Data de codificação: 18/08/2024
+ *  Objetivo da classe ListaAluno: Gerenciar uma lista de alunos de forma dinâmica,
+ *  permitindo operações de inserção, remoção e busca em um contexto de
+ *  uma lista simplesmente encadeada.
+ * */
 public class ListaAluno {
     private Nodo pri;
     private Nodo ult;
