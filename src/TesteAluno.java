@@ -13,12 +13,12 @@ public class TesteAluno {
             sc = new Scanner(System.in);
             if (menu == 1) {
                 Aluno aluno = new Aluno();
-                System.out.println("Insira seu nome: ");
-                aluno.setNome(sc.nextLine());
+//                System.out.println("Insira seu nome: ");
+//                aluno.setNome(sc.nextLine());
                 System.out.println("Insira a cidade: ");
                 aluno.setEndereco(sc.nextLine());
-                System.out.println("Insira o telefone: ");
-                aluno.setTelefone(sc.nextLine());
+//                System.out.println("Insira o telefone: ");
+//                aluno.setTelefone(sc.nextLine());
                 System.out.println("Insira a matrícula: ");
                 aluno.setMatricula(sc.nextInt());
                 System.out.println("Insira a nota: ");

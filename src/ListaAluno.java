@@ -58,7 +58,7 @@ public class ListaAluno {
 
     //BUSCAR POR NOTA
     public void buscarAlunoPorNota(float nota){
-        Aluno buscar = new Aluno();
+        Aluno buscar;
         ArrayList<Aluno> alunos = new ArrayList<>();
 
         Nodo aux = getPri();
@@ -66,12 +66,13 @@ public class ListaAluno {
             if(Math.abs(aux.getNext().getAluno().getNota() - nota) < 0.001f){
                 buscar = (aux.getNext().getAluno());
                 alunos.add(buscar);
+
             }
             aux = aux.getNext();
         }
 
-        if(aux.getAluno() == null){
-            System.out.println("Não existe nenhum aluno com está nota.");
+        if(alunos.isEmpty()){
+            System.out.println("Não existe aluno com está nota.");
         }else {
             for (Aluno aluno : alunos) {
                 System.out.println(aluno.toString());
@@ -131,8 +132,12 @@ public class ListaAluno {
             aux = aux.getNext();
         }
 
-        for (Aluno aluno : alunos) {
+        if(alunos.isEmpty()){
+            System.out.println("Não existe aluno desta cidade.");
+        }else {
+            for (Aluno aluno : alunos) {
                 System.out.println(aluno.toString());
+            }
         }
 
     }
